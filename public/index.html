@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cadastro de alunos</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <header class="topo">
+    <h1>Cadastro de alunos</h1>
+    <p>Inserir, consultar e excluir com TypeScript, Express e MySQL.</p>
+  </header>
+
+  <main class="conteudo">
+    <section class="cartao">
+      <h2>Novo aluno</h2>
+      <form id="form-aluno" novalidate>
+        <label for="nome">Nome</label>
+        <input id="nome" name="nome" type="text" maxlength="120" required autocomplete="off">
+
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" maxlength="160" required autocomplete="off">
+
+        <label for="curso">Curso</label>
+        <input id="curso" name="curso" type="text" maxlength="120" required autocomplete="off">
+
+        <button type="submit" class="btn-primario">Cadastrar</button>
+      </form>
+    </section>
+
+    <section class="cartao">
+      <h2>Alunos cadastrados</h2>
+      <form id="form-busca" class="busca">
+        <input id="busca" type="search" placeholder="Buscar por nome" aria-label="Buscar por nome">
+        <button type="submit" class="btn-primario">Buscar</button>
+        <button type="button" id="btn-limpar" class="btn-secundario">Limpar</button>
+      </form>
+
+      <p id="mensagem" class="mensagem" role="status" aria-live="polite"></p>
+
+      <div id="confirmacao" class="confirmacao" hidden>
+        <p id="texto-confirmacao"></p>
+        <div class="acoes">
+          <button type="button" id="btn-confirmar" class="btn-perigo">Confirmar exclusão</button>
+          <button type="button" id="btn-cancelar" class="btn-secundario">Cancelar</button>
+        </div>
+      </div>
+
+      <div class="tabela-wrap">
+        <table>
+          <thead>
+            <tr><th>ID</th><th>Nome</th><th>E-mail</th><th>Curso</th><th></th></tr>
+          </thead>
+          <tbody id="lista-alunos"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

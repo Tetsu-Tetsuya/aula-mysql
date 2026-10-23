@@ -1,0 +1,82 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #f4f2ea;
+  color: #1c2b24;
+}
+
+.topo {
+  background: #1d3a2f;
+  color: #fff;
+  padding: 24px 16px;
+  border-bottom: 4px solid #d6ec7a;
+}
+.topo h1 { margin: 0 0 4px; }
+.topo p { margin: 0; opacity: .85; }
+
+.conteudo {
+  max-width: 960px;
+  margin: 24px auto;
+  padding: 0 16px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 800px) {
+  .conteudo { grid-template-columns: 320px 1fr; align-items: start; }
+}
+
+.cartao {
+  background: #fffdf6;
+  border: 1px solid #e2dfd2;
+  border-radius: 14px;
+  padding: 20px;
+}
+.cartao h2 { margin-top: 0; font-size: 1.2rem; }
+
+label { display: block; font-weight: 600; margin: 12px 0 4px; }
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #c9c6b8;
+  border-radius: 8px;
+  font: inherit;
+}
+input:focus { outline: 2px solid #8fb34a; border-color: transparent; }
+
+button {
+  font: inherit;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+.btn-primario { background: #1d3a2f; color: #fff; }
+.btn-secundario { background: #e6e3d6; color: #1c2b24; }
+.btn-perigo { background: #b3261e; color: #fff; }
+#form-aluno .btn-primario { margin-top: 16px; width: 100%; }
+
+.busca { display: flex; gap: 8px; flex-wrap: wrap; }
+.busca input { flex: 1 1 180px; width: auto; }
+
+.mensagem { min-height: 1.4em; margin: 12px 0; }
+.mensagem.sucesso { color: #2e6b1f; }
+.mensagem.erro { color: #b3261e; }
+
+.confirmacao {
+  background: #fdecea;
+  border-left: 4px solid #b3261e;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+.confirmacao p { margin: 0 0 8px; }
+.acoes { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.tabela-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 8px; border-bottom: 1px solid #e2dfd2; }
+th { font-size: .85rem; text-transform: uppercase; letter-spacing: .03em; }
+td button { padding: 6px 10px; }
